@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+
+<html>
+	<head>
+		<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/stylesheets.css">
+
+ 		
+		<title>Vine Loop Test</title>
+		
+		<script type="text/javascript">
+		function play() {
+			var video1 = document.getElementById("video1");
+			var video2 = document.getElementById("video2");
+			if (video1.paused) {
+				video1.play();
+			} else {
+				video1.pause();
+			}
+
+			if (video2.paused) {
+				video2.play();
+			} else {
+				video2.pause();
+			}
+		}
+		function pause() {
+			var video1 = document.getElementById("video1");
+			var video2 = document.getElementById("video2");
+			if (video1.play) {
+				video1.pause();
+			} else {
+				video1.play();
+
+			}
+			if (video2.play) {
+				video2.pause();
+			} else {
+				video2.play();
+
+			}
+		}
+		
+
+		</script>
+	
+
+
+	</head>
+
+
+	<body>
+		<h1>This is a test!</h1>
+		<div class="video-container">
+			<video width="320" height="240" id="video1" class="vjs-tech" preload="auto" loop="" poster="http://v.cdn.vine.co/r/thumbs/697D48C500973399592886583296_1dfa3c5c71f.3.1.mp4_3IYZTDDsDxs8.WFt2ilUFp0CWZ4ObVsFzlFFW1E3x08CN961W112zJA53DcnOLXI.jpg?versionId=vCZZ2PFFshqpRp_Wnb_orTFOAsc5YdN8" src="http://v.cdn.vine.co/r/videos/3859D3D8A4973399590340812800_131dac3ce08.3.1_FTcmBoAE3LQozwjfEAI8nY9z9vkjyNRyJ11yl0Jk9a6M5qy9RoVAlQeOKcc6EG7z.mp4?versionId=4eEIuQ1D4ChwgIQeX8e3ol5x8TLG8kvn">
+                <source src="http://v.cdn.vine.co/r/videos/3859D3D8A4973399590340812800_131dac3ce08.3.1_FTcmBoAE3LQozwjfEAI8nY9z9vkjyNRyJ11yl0Jk9a6M5qy9RoVAlQeOKcc6EG7z.mp4?versionId=4eEIuQ1D4ChwgIQeX8e3ol5x8TLG8kvn" type="video/mp4">
+            </video>
+		</div>
+		<div class="video-container">
+			<video id="video2" width="320" height="240" class="vjs-tech" preload="auto" loop="" poster="http://v.cdn.vine.co/r/thumbs/697D48C500973399592886583296_1dfa3c5c71f.3.1.mp4_3IYZTDDsDxs8.WFt2ilUFp0CWZ4ObVsFzlFFW1E3x08CN961W112zJA53DcnOLXI.jpg?versionId=vCZZ2PFFshqpRp_Wnb_orTFOAsc5YdN8" src="http://v.cdn.vine.co/r/videos/3859D3D8A4973399590340812800_131dac3ce08.3.1_FTcmBoAE3LQozwjfEAI8nY9z9vkjyNRyJ11yl0Jk9a6M5qy9RoVAlQeOKcc6EG7z.mp4?versionId=4eEIuQ1D4ChwgIQeX8e3ol5x8TLG8kvn">
+                <source src="http://v.cdn.vine.co/r/videos/3859D3D8A4973399590340812800_131dac3ce08.3.1_FTcmBoAE3LQozwjfEAI8nY9z9vkjyNRyJ11yl0Jk9a6M5qy9RoVAlQeOKcc6EG7z.mp4?versionId=4eEIuQ1D4ChwgIQeX8e3ol5x8TLG8kvn" type="video/mp4">
+            </video>
+		</div>
+		<button type="button" class="btn btn-success" onclick="play()">Play</button>
+		<button type="button" class="btn btn-danger" onclick="pause()">Pause</button>
+	</body>
+
+</html>
