@@ -1,5 +1,27 @@
 
-.video-container {
-	width: 10px;
 
+.footer {
+				color: #cccccc;
+				/*text-align: center; */
+			}
+			.footer p{
+				font-size: 11px;
+			}
+			.footer a {
+				color: #ccccff;
+			}
+
+body {
+	padding-top: 40px;
+}			
+
+.number {
+	text-align: center;
+
+}
+
+
+.vjs-tech {
+	width:320px;
+	height:240px;
 }

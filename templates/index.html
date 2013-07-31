@@ -5,11 +5,12 @@
 	<head>
 		<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
 		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
+		<!--<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css"> -->
+		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/stylesheets.css">
 
  		
-		<title>Vine Loop Test</title>
+		<title>NiveLoop</title>
 		
 		<script type="text/javascript">
 		function play() {
@@ -43,6 +44,147 @@
 
 			}
 		}
+
+		$(document).ready(function(){
+			console.log("Working!");
+			var video1 = document.getElementById("video1");
+			var video2 = document.getElementById("video2");
+			var video3 = document.getElementById("video3");
+			var video4 = document.getElementById("video4");
+			var video5 = document.getElementById("video5");
+			var video6 = document.getElementById("video6");
+			//var video7 = document.getElementById("video7");
+			//var video8 = document.getElementById("video8");
+			//var video9 = document.getElementById("video9");
+			var playing = false;
+			video1.muted = true;
+			video2.muted=true;
+			video3.muted=true;
+			video4.muted=true;
+			video5.muted=true;
+			video6.muted=true;
+			//video7.muted=true;
+			//video8.muted=true;
+			//video9.muted=true;
+			
+			
+			$("body").keypress(function(event) {
+				console.log(event.which);
+				if(event.which == 49){
+					console.log("key 1 pressed");
+					if (video1.muted == true){
+						console.log("unmuting video 1");
+						video1.muted = false
+					}
+					else {
+						video1.muted = true
+						console.log("video 1 muted")
+					}
+				}
+
+				if(event.which == 50){
+					console.log("key 2 pressed");
+					if (video2.muted == true){
+						console.log("unmuting video 2");
+						video2.muted = false
+					}
+					else {
+						video2.muted = true
+						console.log("video 2 muted")
+					}
+				}
+
+				if(event.which == 51){
+					console.log("key 3 pressed");
+					if (video3.muted == true){
+						console.log("unmuting video 3");
+						video3.muted = false
+					}
+					else {
+						video3.muted = true
+						console.log("video 3 muted")
+					}
+				}
+
+				if(event.which == 52){
+					console.log("key 4 pressed");
+					if (video4.muted == true){
+						console.log("unmuting video 4");
+						video4.muted = false
+					}
+					else {
+						video4.muted = true
+						console.log("video 4 muted")
+					}
+				}
+
+				if(event.which == 53){
+					console.log("key 5 pressed");
+					if (video5.muted == true){
+						console.log("unmuting video 5");
+						video5.muted = false
+					}
+					else {
+						video5.muted = true
+						console.log("video 5 muted")
+					}
+				}
+
+				if(event.which == 54){
+					console.log("key 6 pressed");
+					if (video6.muted == true){
+						console.log("unmuting video 6");
+						video6.muted = false
+					}
+					else {
+						video6.muted = true
+						console.log("video 6 muted")
+					}
+				}				
+
+
+
+				if(event.which == 13){
+					if (playing == false){
+						playing = true;
+						console.log("playing all videos");
+						video1.play();
+						video2.play();
+						video3.play();
+						video4.play();
+						video5.play();
+						video6.play();
+						//video7.play();
+						//video8.play();
+						//video9.play();
+					}
+					else {
+						playing = false;
+						console.log("pausing all videos")
+						video1.pause();
+						video2.pause();
+						video3.pause();
+						video4.pause();
+						video5.pause();
+						video6.pause();
+						//video7.pause();
+						//video8.pause();
+						//video9.pause();
+						
+					}
+				}
+
+			});
+				
+
+
+
+
+
+
+		});
+
+
 		
 
 		</script>
@@ -50,22 +192,175 @@
 
 
 	</head>
-
-
 	<body>
-		<h1>This is a test!</h1>
-		<div class="video-container">
-			<video width="320" height="240" id="video1" class="vjs-tech" preload="auto" loop="" poster="http://v.cdn.vine.co/r/thumbs/697D48C500973399592886583296_1dfa3c5c71f.3.1.mp4_3IYZTDDsDxs8.WFt2ilUFp0CWZ4ObVsFzlFFW1E3x08CN961W112zJA53DcnOLXI.jpg?versionId=vCZZ2PFFshqpRp_Wnb_orTFOAsc5YdN8" src="http://v.cdn.vine.co/r/videos/3859D3D8A4973399590340812800_131dac3ce08.3.1_FTcmBoAE3LQozwjfEAI8nY9z9vkjyNRyJ11yl0Jk9a6M5qy9RoVAlQeOKcc6EG7z.mp4?versionId=4eEIuQ1D4ChwgIQeX8e3ol5x8TLG8kvn">
-                <source src="http://v.cdn.vine.co/r/videos/3859D3D8A4973399590340812800_131dac3ce08.3.1_FTcmBoAE3LQozwjfEAI8nY9z9vkjyNRyJ11yl0Jk9a6M5qy9RoVAlQeOKcc6EG7z.mp4?versionId=4eEIuQ1D4ChwgIQeX8e3ol5x8TLG8kvn" type="video/mp4">
-            </video>
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<button type="button" class="btn btn-navbar"
+						data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="brand" href="#">NiveLoop</a>
+					<div class="nav-collapse collapse">
+						<ul class="nav">
+							<li class="active"><a href="#">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="video-container">
-			<video width="320" height="240" id="video2" class="vjs-tech" preload="auto" loop="" poster="http://v.cdn.vine.co/s/thumbs/FDCF2967-94AB-4C14-9424-0A9A242B10A8-116-000000023869E368_12509ec4431.1.3.mp4.jpg?versionId=0OD.flZbhRnpI2Rf.Ez7iKEq0bD5w.BY">
-            <source src="http://v.cdn.vine.co/s/videos/FDCF2967-94AB-4C14-9424-0A9A242B10A8-116-000000023869E368_192fc65cc79.1.3.mp4?versionId=mIZ9cAOVWmU9gWB1nJLSdW8p1vlAzsse" type="video/mp4">
-        </video>
-		</div>
-		<button type="button" class="btn btn-success" onclick="play()">Play</button>
-		<button type="button" class="btn btn-danger" onclick="pause()">Pause</button>
-	</body>
 
+		<div class="container">
+			<div class="row-fluid heading">
+				<div class="span12">
+					<h1>NiveLoop</h1>
+				</div>
+			</div>
+			<div class="row-fluid subheading">
+				<div class="span12">
+					<p class="lead">A Vine loop machine</p>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="span5">
+					<div class="well">
+						<strong>Instructions:</strong><br>
+						Press [Enter] to start/stop all videos <br>
+						Press a number [1-6] to unmute/mute each video
+					</div>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="span4">
+					<div class="video-container">
+						<video id="video1" class="vjs-tech" preload="auto" loop="" poster="http://v.cdn.vine.co/r/thumbs/8A1026229F966505753047416832_1b468cbd662.3.mp4_q_cTyZWPx6McUuHGbkocd8_Xju4zbm0qzmvYzkAjcve_YiQwL82ndx6HMENEvc6f.jpg?versionId=DUqXQr3HCAuObRjMJFsz3gmYlZhMx1II">
+						<source src="http://v.cdn.vine.co/r/videos/FFEB4E28BC966505748945575936_100d2d39f74.3_PfEgp.87WhEDy1vFuF31G0CRyAIogXsIG9oT_2WzeXsDn8e3yrWL_TifafiDdeoD.mp4?versionId=cdsCzRtbM9PfqkAmKXaP.FzHcGA.F9ru" type="video/mp4">
+						</video>
+						<div class="span12 number"><span>1</span></div>
+					</div>
+				</div>
+
+				<div class="span4">
+					<div class="video-container">
+						<video id="video2" class="vjs-tech" preload="auto" loop="" poster="http://vines.s3.amazonaws.com/v/thumbs/2013/05/18/6752A0EB-A143-4F45-B469-177CB85D8CF0-3827-000003CCABE78DDA_1.1.mp4.jpg?versionId=wKkdYSniI66VXK_o_4AHjOTDMf0U9JiT">
+						<source src="http://vines.s3.amazonaws.com/v/videos/6752A0EB-A143-4F45-B469-177CB85D8CF0-3827-000003CCABE78DDA_1.1.mp4?versionId=94OB_d.OGwigSUgHsbUon9bq.7FukjCr" type="video/mp4">
+						</video>
+						<div class="span12 number"><span>2</span></div>
+					</div>
+					
+				</div>
+				<div class="span4">
+					<div class="video-container">
+						<video id="video3" class="vjs-tech" preload="auto" loop="" poster="http://v.cdn.vine.co/r/thumbs/2F2DF68DE3970155031955464192_1b3335afeda.3.mp4_bJPqh0Dy4YmKP2OgwHp20dv_dHfYqT4czchA1Hs1DcDXVA1HE9VCPo_uhRStbb2s.jpg?versionId=SIwrTZepua_xIhtkm21Z4a9uZDHrFj7k">
+						<source src="http://mtc.cdn.vine.co/r/videos/DF80F6A49E970155020882534400_148d7065b24.3_P7txukziaIW0w0VhLm2aoReExSu_k5iDav.uAJT3YuJZ9n8XnwHlGsZyJ_IJJbgB.mp4?versionId=jAk4PBLBXMV47dBZAFXN.doUJ..N.iur" type="video/mp4">
+						</video>
+						<div class="span12 number"><span>3</span></div>
+					</div>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="span4">
+					<div class="video-container">
+						<video id="video4" class="vjs-tech" preload="auto" loop="" poster="http://v.cdn.vine.co/r/thumbs/DB40472D03971561073541062656_19e92d8d396.3.1.mp4_P8b91_oW_4OR6EjIUWIKHubRSplOVm9qmeMvjb8aCkrfxeWQrvOiran.M1RW43YL.jpg?versionId=7PylwtCSGOOdq6XjTH9H2h0KMRN1L88Y">
+						<source src="http://mtc.cdn.vine.co/r/videos/33804AD3D3971561069657153536_13888c87710.3.1_BacoYAmqKA744JAXlD3jpJTLTPfjAPu.XXpdV8Pv8QaIZ3MUd6PZqQHckYSn6LSA.mp4?versionId=v.R_wtg8k.o3IQQ0tqNGAWVXVcbOFFVs" type="video/mp4">
+						</video>
+						<div class="span12 number"><span>4</span></div>
+					</div>
+				</div>
+
+				<div class="span4">
+					<div class="video-container">
+						<video id="video5" class="vjs-tech" preload="auto" loop="" poster="http://v.cdn.vine.co/v/thumbs/2013/06/09/A1BCA61D-7B61-4AE6-8F8D-C257AAFC5869-3274-000002FCAFAD4679_1.1.2.mp4.jpg?versionId=tkHwDNAveY0ZIJ9_hi916KO3RSMkXpCp">
+						<source src="http://v.cdn.vine.co/v/videos/A1BCA61D-7B61-4AE6-8F8D-C257AAFC5869-3274-000002FCAFAD4679_1.1.2.mp4?versionId=CWPYOOPKbRPvsxAEsHBiMd6vx5eaG5_u" type="video/mp4">
+						</video>
+						<div class="span12 number"><span>5</span></div>
+					</div>
+					
+				</div>
+				<div class="span4">
+					<div class="video-container">
+						<video id="video6" class="vjs-tech" preload="auto" loop="" poster="http://v.cdn.vine.co/r/thumbs/A5CF2B712D974095990493716480_1a528a36b4b.3.1.mp4_0CnmylyERnE9y9Lz5.CIvvAKU2I3ZERJKvwAEHhWw39gmVPfG8Q5B88z4hEtM.Hi.jpg?versionId=q3H8wQoWWOzmtCQIVTOGTW8q.CwzS_h0">
+						<source src="http://v.cdn.vine.co/r/videos/A6D92898DF974095987536957440_19f7e05951f.3.1_K6sU4cNxe_ngxYjFCFB2VTUmetUm3b3Iu5kr3Briz834ratVn8xkkWyOG848Liea.mp4?versionId=QIuphrWSTV.ZBd1gu7ELQZcyPjFvTL79" type="video/mp4">
+						</video>
+						<div class="span12 number"><span>6</span></div>
+					</div>
+				</div>
+			</div>
+			<!--
+			<div class="row-fluid">
+				<div class="span4">
+					<div class="video-container">
+						<video width="320" height="240" id="video7" class="vjs-tech" preload="auto" loop="" poster="http://v.cdn.vine.co/r/thumbs/697D48C500973399592886583296_1dfa3c5c71f.3.1.mp4_3IYZTDDsDxs8.WFt2ilUFp0CWZ4ObVsFzlFFW1E3x08CN961W112zJA53DcnOLXI.jpg?versionId=vCZZ2PFFshqpRp_Wnb_orTFOAsc5YdN8" src="http://v.cdn.vine.co/r/videos/3859D3D8A4973399590340812800_131dac3ce08.3.1_FTcmBoAE3LQozwjfEAI8nY9z9vkjyNRyJ11yl0Jk9a6M5qy9RoVAlQeOKcc6EG7z.mp4?versionId=4eEIuQ1D4ChwgIQeX8e3ol5x8TLG8kvn">
+						<source src="http://v.cdn.vine.co/r/videos/3859D3D8A4973399590340812800_131dac3ce08.3.1_FTcmBoAE3LQozwjfEAI8nY9z9vkjyNRyJ11yl0Jk9a6M5qy9RoVAlQeOKcc6EG7z.mp4?versionId=4eEIuQ1D4ChwgIQeX8e3ol5x8TLG8kvn" type="video/mp4">
+						</video>
+						<div class="span12 number"><span>7</span></div>
+					</div>
+				</div>
+
+				<div class="span4">
+					<div class="video-container">
+						<video width="320" height="240" id="video8" class="vjs-tech" preload="auto" loop="" poster="http://v.cdn.vine.co/r/thumbs/697D48C500973399592886583296_1dfa3c5c71f.3.1.mp4_3IYZTDDsDxs8.WFt2ilUFp0CWZ4ObVsFzlFFW1E3x08CN961W112zJA53DcnOLXI.jpg?versionId=vCZZ2PFFshqpRp_Wnb_orTFOAsc5YdN8" src="http://v.cdn.vine.co/r/videos/3859D3D8A4973399590340812800_131dac3ce08.3.1_FTcmBoAE3LQozwjfEAI8nY9z9vkjyNRyJ11yl0Jk9a6M5qy9RoVAlQeOKcc6EG7z.mp4?versionId=4eEIuQ1D4ChwgIQeX8e3ol5x8TLG8kvn">
+						<source src="http://v.cdn.vine.co/r/videos/3859D3D8A4973399590340812800_131dac3ce08.3.1_FTcmBoAE3LQozwjfEAI8nY9z9vkjyNRyJ11yl0Jk9a6M5qy9RoVAlQeOKcc6EG7z.mp4?versionId=4eEIuQ1D4ChwgIQeX8e3ol5x8TLG8kvn" type="video/mp4">
+						</video>
+						<div class="span12 number"><span>8</span></div>
+					</div>
+					
+				</div>
+				<div class="span4">
+					<div class="video-container">
+						<video width="320" height="240" id="video9" class="vjs-tech" preload="auto" loop="" poster="http://v.cdn.vine.co/r/thumbs/697D48C500973399592886583296_1dfa3c5c71f.3.1.mp4_3IYZTDDsDxs8.WFt2ilUFp0CWZ4ObVsFzlFFW1E3x08CN961W112zJA53DcnOLXI.jpg?versionId=vCZZ2PFFshqpRp_Wnb_orTFOAsc5YdN8" src="http://v.cdn.vine.co/r/videos/3859D3D8A4973399590340812800_131dac3ce08.3.1_FTcmBoAE3LQozwjfEAI8nY9z9vkjyNRyJ11yl0Jk9a6M5qy9RoVAlQeOKcc6EG7z.mp4?versionId=4eEIuQ1D4ChwgIQeX8e3ol5x8TLG8kvn">
+						<source src="http://v.cdn.vine.co/r/videos/3859D3D8A4973399590340812800_131dac3ce08.3.1_FTcmBoAE3LQozwjfEAI8nY9z9vkjyNRyJ11yl0Jk9a6M5qy9RoVAlQeOKcc6EG7z.mp4?versionId=4eEIuQ1D4ChwgIQeX8e3ol5x8TLG8kvn" type="video/mp4">
+						</video>
+						<div class="span12 number"><span>9</span></div>
+					</div>
+				</div>
+			-->
+			</div>
+
+			
+					
+		
+			<div class="row-fluid faq">
+				<div class="span10 offset1">
+					<h3>FAQ</h3>
+					<div class="accordion" id="accordion2">
+						<div class="accordion-group">
+							<div class="accordion-heading">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne"> Why would you build this?
+								</a>
+							</div>
+							<div id="collapseOne" class="accordion-body collapse">
+								<div class="accordion-inner">
+									Because I can.
+								</div>
+							</div>
+						</div>
+						<div class="accordion-group">
+							<div class="accordion-heading">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+									Will you sell this it for a gazillion dollars?
+								</a>
+							</div>
+							<div id="collapseTwo" class="accordion-body collapse">
+								<div class="accordion-inner">
+									Why not!
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row-fluid footer">
+				<div class="span12">
+					<p>This work is licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC By-SA 3.0
+					</a>, whithout all the cruft that would otherwise be put at the bottom of the page.</p>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
